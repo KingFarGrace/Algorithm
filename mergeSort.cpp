@@ -5,16 +5,16 @@ void mergeSort(int array[], int n);
 void mergePass(int array[], int length, int n);
 void merge(int array[], int low, int mid, int high);
 
-void main() {
+int main() {
     int array[] = {9, 2, 7 ,5, 1, 3, 4, 10, 8};
     mergeSort(array, 9);
     for (int i = 0; i < 9; i++)
-        printf("第%d个数为：%d\n", i, array[i]);
+        printf("pos: %d value: %d\n", i, array[i]);
     system("pause");
 }
 
 /*
- * 归并排序
+ * merge sort
  */
 void mergeSort(int array[], int n)
 {
