@@ -1,2 +1,3 @@
-# Algorithm
-learn algorithm
+# Algorithm  
+
+Some code for algorithm.

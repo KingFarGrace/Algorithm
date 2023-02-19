@@ -1,15 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
+
+using namespace std;
 
 void mergeSort(int array[], int n);
 void mergePass(int array[], int length, int n);
 void merge(int array[], int low, int mid, int high);
 
 int main() {
-    int array[] = {9, 2, 7 ,5, 1, 3, 4, 10, 8};
-    mergeSort(array, 9);
-    for (int i = 0; i < 9; i++)
-        printf("pos: %d value: %d\n", i, array[i]);
+    int length;
+    cout << "Input the length of array:" << endl;
+    cin >> length;
+    int array[length];
+    for (int i = 0; i < length; i++)
+    {
+        cout << "number " << i + 1 << ": ";
+        cin >> array[i];
+    }
+    
+    mergeSort(array, length);
+    for (int i = 0; i < length; i++)
+    {
+        cout << "pos: " << i << " value: " << array[i] << "\n";
+    }
     system("pause");
 }
 
@@ -20,16 +34,22 @@ void mergeSort(int array[], int n)
 {
     int length;
     for (length = 1; length < n; length *= 2)
+    {
         mergePass(array, length, n);
+    }
 }
 
 void mergePass(int array[], int length, int n)
 {
     register int i;
     for (i = 0; i + 2 * length - 1 < n; i += 2 * length)
+    {
         merge(array, i, i + length - 1, i + 2 * length - 1);
+    }
     if (i + length - 1 < n)
+    {
         merge(array, i, i + length - 1, n - 1);
+    }
 }
 
 void merge(int array[], int low, int mid, int high)
@@ -57,7 +77,9 @@ void merge(int array[], int low, int mid, int high)
     }
 
     for (k = 0, i = low; i <= high; k++, i++)
+    {
         array[i] = tmpArray[k];
+    }
 
     delete tmpArray;
 }
