@@ -24,7 +24,6 @@ int main() {
     {
         cout << "pos: " << i << " value: " << array[i] << "\n";
     }
-    system("pause");
 }
 
 /*

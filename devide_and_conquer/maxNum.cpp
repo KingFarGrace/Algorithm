@@ -8,8 +8,8 @@ using namespace std;
  * 2. Get the max number in the right part of array;
  * 3. return the bigger one.
  * You should noticed that when the left is equal to right, there is only one value in the array, so it is the max number which will be returned.
- * The time complexity is - O(1) ... length = 1
- *                       |- O(n) ... length > 1
+ * The time complexity is |- O(1) ... length = 1
+ *                        |- O(n) ... length > 1
 */
 int maxnum(int* array, int left, int right)
 {

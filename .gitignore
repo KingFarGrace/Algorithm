@@ -1,0 +1,8 @@
+# all files and dirs
+*
+
+# except .cpps/.mds/.gitignore/dirs
+!*.cpp
+!*.md
+!.gitignore
+!*/

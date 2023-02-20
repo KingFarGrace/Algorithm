@@ -1,3 +1,5 @@
 # Algorithm  
 
-Some code for algorithm.
+## Introduction
+
+This hub contains some codes for basic algorithm practice and learning.
